@@ -1,5 +1,5 @@
-#Template global
+# Template global
 https://pixelarity.com/hyperbolic
 
-##Galerie
+## Galerie
 https://html5up.net/parallelism
