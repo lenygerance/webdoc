@@ -141,5 +141,20 @@
 						$menu._hide();
 
 			});
+for (const unBtn of document.querySelectorAll(".radio")) {
+  let overlays= document.querySelectorAll(".image_overlay")
+  unBtn.addEventListener("click",function(event){
+    for (const unOverlay of overlays) {
+      let num= event.target.id.split("radio-")[1]
+      if(unOverlay.id=="overlay-"+num){
+
+        unOverlay.style.zIndex=1
+      }
+      else{
+        unOverlay.style.zIndex=-1
+      }
+    }
+  })
+}
 
 })(jQuery);

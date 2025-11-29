@@ -1,372 +1,489 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Article</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<head>
+	<title>Article</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Webdoc.</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+<body class="is-preload">
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Acceuil</a></li>
-								<li><a href="interview.html">Interview</a></li>
-								<li><a href="podcast.html">Podcast</a></li>
-								<li><a href="index.html#four">Articles</a></li>
-								<li><a href="bets-of.html">Best OF</a></li>
-								<li><a href="galerie.html">Galerie Photos</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Webdoc.</a></h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Acceuil</a></li>
+					<li><a href="interview.html">Interview</a></li>
+					<li><a href="podcast.html">Podcast</a></li>
+					<li><a href="index.html#four">Articles</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>Galerie</h2>
+				</div>
+			</header>
+
+			<div class="inner">
+				<!-- Carousel stylé -->
+				<div class="carousel">
+
+					<input type="radio" name="c" id="c1" checked>
+					<input type="radio" name="c" id="c2">
+					<input type="radio" name="c" id="c3">
+					<input type="radio" name="c" id="c4">
+					<input type="radio" name="c" id="c5">
+					<input type="radio" name="c" id="c6">
+
+					<div class="slides">
+						<div class="slide s1">
+							<img src="images/sologuitare.jpg" alt="sologuitare">
+							<div class="overlay">
+								<h3>Solo guitare</h3>
+								<p class="tags">#live #guitar #mood</p>
+							</div>
 						</div>
-					</nav>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Elements</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
+						<div class="slide s2">
+							<img src="images/planprod2.jpg" alt="planprod">
+							<div class="overlay">
+								<h3>Session studio</h3>
+								<p class="tags">#studio #beatmaking #workflow</p>
 							</div>
-						</header>
+						</div>
 
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
-
-									<section>
-										<h3 class="major">Text</h3>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<h4>Blockquote</h4>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h4>Preformatted</h4>
-										<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
-
-									<section>
-										<h3 class="major">Lists</h3>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<h4>Unordered</h4>
-												<ul>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Sagittis adipiscing.</li>
-													<li>Felis enim feugiat.</li>
-												</ul>
-												<h4>Alternate</h4>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam.</li>
-													<li>Sagittis adipiscing.</li>
-													<li>Felis enim feugiat.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<h4>Ordered</h4>
-												<ol>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis viverra.</li>
-													<li>Felis enim feugiat.</li>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis lorem.</li>
-													<li>Felis enim et feugiat.</li>
-												</ol>
-												<h4>Icons</h4>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h4>Actions</h4>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<ul class="actions">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions small">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions stacked small">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-												</ul>
-												<ul class="actions stacked small">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-										<h4>Pagination</h4>
-										<ul class="pagination">
-											<li><span class="button small disabled">Prev</span></li>
-											<li><a href="#" class="page active">1</a></li>
-											<li><a href="#" class="page">2</a></li>
-											<li><a href="#" class="page">3</a></li>
-											<li><span>&hellip;</span></li>
-											<li><a href="#" class="page">8</a></li>
-											<li><a href="#" class="page">9</a></li>
-											<li><a href="#" class="page">10</a></li>
-											<li><a href="#" class="button small">Next</a></li>
-										</ul>
-									</section>
-
-									<section>
-										<h3 class="major">Table</h3>
-										<h4>Default</h4>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-
-										<h4>Alternate</h4>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
-
-									<section>
-										<h3 class="major">Buttons</h3>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button large">Large</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Disabled</span></li>
-											<li><span class="button disabled">Disabled</span></li>
-										</ul>
-									</section>
-
-									<section>
-										<h3 class="major">Form</h3>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<label for="demo-name">Name</label>
-													<input type="text" name="demo-name" id="demo-name" value="" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<label for="demo-email">Email</label>
-													<input type="email" name="demo-email" id="demo-email" value="" />
-												</div>
-												<div class="col-12">
-													<label for="demo-category">Category</label>
-													<select name="demo-category" id="demo-category">
-														<option value="">-</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy</label>
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">Not a robot</label>
-												</div>
-												<div class="col-12">
-													<label for="demo-message">Message</label>
-													<textarea name="demo-message" id="demo-message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" class="primary" /></li>
-														<li><input type="reset" value="Reset" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
-
-									<section>
-										<h3 class="major">Image</h3>
-										<h4>Fit</h4>
-										<div class="box alt">
-											<div class="row gtr-uniform">
-												<div class="col-12"><span class="image fit"><img src="images/pic08.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic07.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic07.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic07.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h4>Left &amp; Right</h4>
-										<p><span class="image left"><img src="images/pic01.jpg" alt="" /></span>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien. Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
-										<p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius. Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat. Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui.</p>
-									</section>
-
-								</div>
+						<div class="slide s3">
+							<img src="images/planinstru3.jpg" alt="planinstru">
+							<div class="overlay">
+								<h3>Instruments</h3>
+								<p class="tags">#keys #samples #textures</p>
 							</div>
+						</div>
 
-					</section>
+						<div class="slide s4">
+							<img src="images/sac_custom(bon-angle).jpg" alt="sac custom">
+							<div class="overlay">
+								<h3>Merch & visuels</h3>
+								<p class="tags">#design #merch #creative</p>
+							</div>
+						</div>
 
+						<div class="slide s5">
+							<img src="images/Album&cup.jpg" alt="album cup">
+							<div class="overlay">
+								<h3>Covers</h3>
+								<p class="tags">#album #coverart #vinyl</p>
+							</div>
+						</div>
 
+						<div class="slide s6">
+							<img src="images/logoMiracleWave2.jpg" alt="miracle wave">
+							<div class="overlay">
+								<h3>Miracle Wave</h3>
+								<p class="tags">#band #wave #project</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Dots / navigation -->
+					<div class="controls">
+						<label for="c1" class="dot" id="d1"></label>
+						<label for="c2" class="dot" id="d2"></label>
+						<label for="c3" class="dot" id="d3"></label>
+						<label for="c4" class="dot" id="d4"></label>
+						<label for="c5" class="dot" id="d5"></label>
+						<label for="c6" class="dot" id="d6"></label>
+					</div>
+
+				</div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<style>
+            /***** Carousel: style + hover overlay *****/
+            .carousel { max-width: 1400px; margin: 32px auto; position: relative; }
+            .carousel input { display: none; }
 
-	</body>
+            .slides { position: relative; height: 750px; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px rgba(10,10,20,0.25); }
+            .slide { position: absolute; inset: 0; opacity: 0; transform: scale(1.02); transition: opacity .6s ease, transform .6s ease; display: flex; align-items: flex-end; }
+            .slide img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.05) contrast(1.02); transition: transform 0.9s cubic-bezier(.2,.9,.2,1); }
+
+            /* show slide when radio checked */
+            #c1:checked ~ .slides .s1,
+            #c2:checked ~ .slides .s2,
+            #c3:checked ~ .slides .s3,
+            #c4:checked ~ .slides .s4,
+            #c5:checked ~ .slides .s5,
+            #c6:checked ~ .slides .s6 {
+                opacity: 1;
+                transform: scale(1);
+                z-index: 2;
+            }
+
+            /* overlay that appears on hover or when slide active */
+            .overlay {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 40px 48px;
+                background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.75) 100%);
+                color: #fff;
+                opacity: 0;
+                transform: translateY(18px);
+                transition: all .38s ease;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            /* reveal on hover or if slide is active */
+            .slide:hover .overlay,
+            #c1:checked ~ .slides .s1 .overlay,
+            #c2:checked ~ .slides .s2 .overlay,
+            #c3:checked ~ .slides .s3 .overlay,
+            #c4:checked ~ .slides .s4 .overlay,
+            #c5:checked ~ .slides .s5 .overlay,
+            #c6:checked ~ .slides .s6 .overlay {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* zoom image on hover */
+            .slide:hover img {
+                transform: scale(1.15);
+            }
+
+            .overlay h3 { margin: 0; font-size: 2.2rem; letter-spacing: -0.5px; font-weight: 800; text-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+            .overlay .tags { margin-top: 12px; font-size: 1.25rem; color: #ffd; font-weight: 700; display: inline-block; gap: .6rem; }
+
+            /* Dot navigation */
+            .controls { display:flex; justify-content:center; gap:12px; margin-top:20px; }
+            .controls .dot { width:14px; height:14px; border-radius:50%; background:rgba(255,255,255,0.45); display:inline-block; cursor:pointer; transition: all .22s; border: 2px solid rgba(0,0,0,0.08); }
+            .controls .dot:hover { transform:scale(1.15); background:rgba(255,255,255,0.85); }
+
+            /* highlight active dot */
+            #c1:checked ~ .controls #d1,
+            #c2:checked ~ .controls #d2,
+            #c3:checked ~ .controls #d3,
+            #c4:checked ~ .controls #d4,
+            #c5:checked ~ .controls #d5,
+            #c6:checked ~ .controls #d6 {
+                background: #ff6b6b;
+                box-shadow: 0 6px 18px rgba(255,107,107,0.25);
+                transform: scale(1.18);
+            }
+
+            /* responsive */
+            @media (max-width: 900px) {
+                .carousel { max-width: 1000px; }
+                .slides { height: 600px; }
+                .overlay { padding: 30px 36px; }
+                .overlay h3 { font-size: 1.6rem; }
+                .overlay .tags { font-size: 1.05rem; }
+            }
+            @media (max-width: 520px) {
+                .carousel { max-width: 100%; }
+                .slides { height: 360px; }
+                .overlay { padding: 16px 18px; }
+                .overlay h3 { font-size: 1.1rem; }
+                .overlay .tags { font-size: 0.9rem; }
+                .controls { gap: 8px; }
+                .controls .dot { width:10px; height:10px; }
+            }
+            </style>
+		</section>
+		
+
+	</div>
+
+<style>
+
+section#projets {
+    background: linear-gradient(#010a3e, salmon);
+}
+
+#projets h1 {
+    position: absolute;
+    font-size: 4rem;
+    font-weight: 900;
+    top: 90px;
+    left: 25px;
+    color: #df1256;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    animation: animate 3s ease-in-out infinite;
+}
+
+.radio {
+    display: none;
+
+}
+
+.container {
+    position: relative;
+    width: 70%;
+    top: 80px;
+    margin: auto;
+}
+
+.slider {
+    width: 100%;
+    position: absolute;
+    height: 0;
+    padding-bottom: 56.25%;
+    background: #141414;
+    overflow: hidden;
+    border: solid 1px #2e2e2e;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: 1.3s;
+}
+
+.titre {
+    position: absolute;
+    width: 100%;
+    left: 5%;
+    top: 5%;
+    top: -100%;
+    color: #ffeb3b;
+    font-weight: 900;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    line-height: 50px;
+    transition: 0.9s;
+}
+
+
+
+.image_img {
+    display: block;
+}
+
+.image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0%;
+    transition: opacity 0.25s;
+}
+
+.slide:hover .image_overlay {
+    opacity: 1;
+}
+
+.slide:hover .image_overlay>* {
+    transform: translateY(0);
+}
+
+.image_overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image_overlay>* {
+    transform: translateY(20px);
+    transition: transform 1.25s;
+}
+
+.image_overlay:hover {
+    opacity: 1;
+}
+
+.image_overlay:hover>* {
+    transform: translateY(0);
+}
+
+.recap {
+    width: 100%;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: 1em;
+    margin-top: 2em;
+
+}
+
+.hover_titre {
+    font-size: 5em;
+    font-weight: bold;
+
+}
+.hover_description {
+    font-size: 2.2em;
+    margin-top: 0.25em;
+    text-justify: auto;
+}
+
+.hover_preview {
+    margin-right: 7em;
+    float: right;
+}
+
+.hover_lang{
+    /* margin-left: 10px; */
+    /* Espace entre les images */
+    width: 100%;
+    max-height:10px;
+
+}
+
+.btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.btn:hover .arrow {
+    width: 30em;
+}
+
+.btn .arrow {
+    background: #fff;
+    height: 0.1em;
+    width: 10.5em;
+    margin-right: 1em;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.btn .arrow::before,
+.btn .arrow::after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    height: 0.1em;
+    width: 0.6em;
+    right: 0;
+    top: 0;
+}
+
+.arrow::before {
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+
+.arrow::after {
+    transform: rotate(-45deg);
+    transform-origin: right top;
+}
+
+img.mini{
+    border-radius: 20px;
+    margin-bottom: 7em;
+}
+
+/*fin effet texte hover*/
+.dots {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.dots label {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    margin: 0 10px;
+    border-radius: 50%;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.dots label:hover {
+    opacity: 0.7;
+}
+
+#radio-1:checked~#slide-1,
+#radio-2:checked~#slide-2,
+#radio-3:checked~#slide-3,
+#radio-4:checked~#slide-4 {
+    opacity: 1;
+}
+
+#radio-1:checked~#slide-1 img,
+#radio-2:checked~#slide-2 img,
+#radio-3:checked~#slide-3 img,
+#radio-4:checked~#slide-4 img {
+    transform: scale(1);
+}
+
+#radio-1:checked~#slide-1 .titre,
+#radio-2:checked~#slide-2 .titre,
+#radio-3:checked~#slide-3 .titre, 
+#radio-4:checked~#slide-4 .titre{
+    opacity: 1;
+    top: 7%;
+    font-size: 80px;
+}
+
+#radio-1:checked~.dots #label-1,
+#radio-2:checked~.dots #label-2,
+#radio-3:checked~.dots #label-3,
+#radio-4:checked~.dots #label-4 {
+    background: #fff;
+    opacity: 1;
+} </style>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>

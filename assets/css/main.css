@@ -37,6 +37,8 @@ ol, ul {
 	list-style: none;
 }
 
+
+
 blockquote, q {
 	quotes: none;
 }
@@ -3626,7 +3628,7 @@ input, select, textarea {
 
 	.wrapper {
 		background-color: #2e3141;
-		margin: 6.5em 0;
+		/* margin: 6.5em 0; */
 		position: relative;
 	}
 
@@ -3642,15 +3644,7 @@ input, select, textarea {
 			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
 		}
 
-		.wrapper:before, .wrapper:after {
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			content: '';
-			display: block;
-			height: 6.5em;
-			position: absolute;
-			width: 100%;
-		}
+		
 
 		.wrapper:before {
 			left: 0;
@@ -3805,10 +3799,10 @@ input, select, textarea {
 				-ms-flex: 1;
 			}
 
-				.wrapper.spotlight .image img {
+				/* .wrapper.spotlight .image img {
 					border-radius: 100%;
 					width: 100%;
-				}
+				} */
 
 			.wrapper.spotlight .content {
 				width: 100%;
