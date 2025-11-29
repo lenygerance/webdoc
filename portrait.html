@@ -2,13 +2,188 @@
 <html>
 
 <head>
-	<title>Portrait de Koffy</title>
+	<title>Portrait</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	<style>
+		/* === ARTICLE PAGE STYLING === */
+		#wrapper header {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 60px 40px;
+			text-align: center;
+			margin-top: 60px;
+		}
+
+		#wrapper header h2 {
+			font-size: 2.8em;
+			margin: 0 0 15px 0;
+			font-weight: 800;
+			letter-spacing: -1px;
+		}
+
+		#wrapper header p {
+			font-size: 1.1em;
+			opacity: 0.95;
+			margin: 0;
+		}
+
+		#wrapper header a {
+			color: #ffd;
+			text-decoration: none;
+			font-weight: 600;
+			transition: all 0.3s ease;
+		}
+
+		#wrapper header a:hover {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+		}
+
+		/* === CONTENT STYLING === */
+		.wrapper .inner {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.wrapper .inner h3 {
+			font-size: 2.2em;
+			color: #1a1a1a;
+			margin: 50px 0 25px 0;
+			font-weight: 800;
+			border-bottom: 4px solid #ff6b6b;
+			padding-bottom: 12px;
+		}
+
+		.wrapper .inner h3:first-of-type {
+			margin-top: 0;
+		}
+
+		.wrapper .inner h4 {
+			font-size: 1.6em;
+			color: #1a1a1a;
+			margin: 35px 0 20px 0;
+			font-weight: 700;
+			border-left: 5px solid #667eea;
+			padding-left: 15px;
+		}
+
+		.wrapper .inner p {
+			font-size: 1.1em;
+			line-height: 1.9;
+			color: #ffffff;
+			text-align: justify;
+			margin-bottom: 20px;
+			letter-spacing: 0.3px;
+		}
+
+		.wrapper .inner span.image {
+			margin: 25px 0;
+			display: block;
+		}
+
+		.wrapper .inner span.image.left {
+			float: left;
+			margin-right: 30px;
+			margin-bottom: 20px;
+			max-width: 350px;
+		}
+
+		.wrapper .inner span.image img {
+			width: 100%;
+			height: auto;
+			border-radius: 12px;
+			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+			transition: transform 0.3s ease;
+		}
+
+		.wrapper .inner span.image img:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);
+		}
+
+		/* === FEATURES GRID === */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .features-grid article {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .features-grid article:hover {
+            transform: scale(1.05) rotateY(2deg);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.2);
+        }
+
+        .features-grid .image {
+            display: block;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .features-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .features-grid article:hover img {
+            transform: scale(1.1);
+        }
+
+        .features-grid h3 {
+            padding: 20px;
+            margin: 0;
+            color: #1a1a1a;
+            font-size: 1.3em;
+            border-bottom: 2px solid #ff6b6b;
+        }
+
+		/* === RESPONSIVE === */
+		@media (max-width: 768px) {
+			#wrapper header {
+				padding: 40px 20px;
+			}
+
+			#wrapper header h2 {
+				font-size: 2em;
+			}
+
+			.wrapper .inner {
+				padding: 0 20px;
+			}
+
+			.wrapper .inner p {
+				font-size: 1em;
+				text-align: left;
+			}
+
+			.wrapper .inner span.image.left {
+				float: none;
+				margin-right: 0;
+				max-width: 100%;
+			}
+
+			.features {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -18,7 +193,7 @@
 
 		<!-- Header -->
 		<header id="header">
-			<h1><a href="index.html">Webdoc</a></h1>
+			<h1><a href="index.html">🎵 Webdoc</a></h1>
 			<nav>
 				<a href="#menu">Menu</a>
 			</nav>
@@ -44,8 +219,8 @@
 		<section id="wrapper">
 			<header>
 				<div class="inner">
-					<h2>Portrait de Koffy</h2>
-					<p>Écrit par <a href="https://github.com/Oceane-Lufundu">Océane.L</a></p>
+					<h2>🎭 Portrait de Koffy</h2>
+					<p>Écrit par <a href="https://github.com/Oceane-Lufundu">Oceane.L</a></p>
 				</div>
 			</header>
 
@@ -53,64 +228,103 @@
 			<div class="wrapper">
 				<div class="inner">
 
-					<h3 class="major"> Koffy, portrait d’un créateur aux deux carrières</h3>
+					<h3 class="major">Portrait de Koffy</h3>
+					<span class="image left"><img src="images koffy/koffy.png" alt="Logo Miracle Wave" /></span>
 
-						<p><span class="image left"><img src="images koffy/koffy.png"></span>
-						Koffy incarne un parcours qui refuse les compromis. Alors que beaucoup choisissent de se concentrer sur une seule voie,
-						lui assume pleinement ses différentes passions. Il défend l’idée de les vivre toutes, sans en mettre une de côté.
-						Étudiant en kinésithérapie, il s’investit dans un domaine exigeant, marqué par la rigueur scientifique et le sens du soin.
-						En parallèle, il développe son univers créatif en tant que producteur et beatmaker, explorant les sonorités
-						et construisant des identités musicales qui lui ressemblent.<br><br>
+					<p>Koffy incarne un parcours qui refuse les compromis. Alors que beaucoup choisissent de se
+						concentrer sur une seule voie,
+						lui assume pleinement ses différentes passions. Il défend l’idée de les vivre toutes, sans en
+						mettre une de côté.
+						Étudiant en kinésithérapie, il s’investit dans un domaine exigeant, marqué par la rigueur
+						scientifique et le sens du soin.
+						En parallèle, il développe son univers créatif en tant que producteur et beatmaker, explorant
+						les sonorités
+						et construisant des identités musicales qui lui ressemblent.</p>
 
-						Ce double engagement n’est pas un simple cumul : c’est une manière de bâtir un parcours cohérent,
+					<p>
+						Ce double engagement n’est pas un simple cumul : c’est une manière de bâtir un parcours
+						cohérent,
 						où chaque discipline apporte quelque chose à l’autre. Sa démarche traduit une conviction forte :
-						il est possible de mener plusieurs projets de front, à condition de leur donner une direction claire et
+						il est possible de mener plusieurs projets de front, à condition de leur donner une direction
+						claire et
 						de les inscrire dans une vision globale.
 
 						Koffy, de son vrai nom Mathéo, évolue dans un environnement musical depuis son plus jeune âge.
-						Avec une mère passionnée de musique et des influences variées allant de la rumba congolaise au jazz manouche,
-						en passant par le R&B et le rap, il s’est naturellement orienté vers cette voie. En parallèle de ses études de
-						kinésithérapie, il développe sa pratique de la création musicale. À travers ses productions, il cherche à exprimer son univers,
-						entre énergie, créativité et émotion.<br><br>
+						Avec une mère passionnée de musique et des influences variées allant de la rumba congolaise au
+						jazz manouche,
+						en passant par le R&B et le rap, il s’est naturellement orienté vers cette voie. En parallèle de
+						ses études de
+						kinésithérapie, il développe sa pratique de la création musicale. À travers ses productions, il
+						cherche à exprimer son univers,
+						entre énergie, créativité et émotion.</p>
 
-						Beatmaker, il explore différents styles, du hip-hop à la sexy drill, tout en s’intéressant à des sonorités plus expérimentales.
-						Cette passion s’est rapidement structurée autour d’un projet concret : Miracle Wave, un collectif indépendant qu’il a fondé afin de
-						produire et d’accompagner des artistes émergents. Ce cadre lui permet de développer des collaborations et de participer à divers
-						projets musicaux. Pour lui, la musique représente un espace d’expression personnel, complémentaire à ses études.<br><br>
+					<p>Beatmaker, il explore différents styles, du hip-hop à la sexy drill, tout en s’intéressant à des
+						sonorités plus expérimentales.
+						Cette passion s’est rapidement structurée autour d’un projet concret : Miracle Wave, un
+						collectif indépendant qu’il a fondé afin de
+						produire et d’accompagner des artistes émergents. Ce cadre lui permet de développer des
+						collaborations et de participer à divers
+						projets musicaux. Pour lui, la musique représente un espace d’expression personnel,
+						complémentaire à ses études.</p>
 
-						Ce qui caractérise le parcours de Mathéo, c’est sa capacité à mener de front ces deux domaines.
-						Il ne les considère pas comme opposés, mais comme complémentaires. La kinésithérapie lui apporte rigueur,
-						discipline et stabilité, tandis que la musique lui offre un espace de créativité et d’expérimentation.
-						Cette double orientation lui permet de construire un équilibre entre rationalité et expression artistique.
+					<p>Ce qui caractérise le parcours de Mathéo, c’est sa capacité à mener de front ces deux domaines.
+						Il ne les considère pas comme opposés, mais comme complémentaires. La kinésithérapie lui apporte
+						rigueur,
+						discipline et stabilité, tandis que la musique lui offre un espace de créativité et
+						d’expérimentation.
+						Cette double orientation lui permet de construire un équilibre entre rationalité et expression
+						artistique.
 
-						À travers ses projets, Mathéo montre qu’il est possible de concilier des centres d’intérêt différents sans renoncer à l’un ou à l’autre.
-						Son objectif est de devenir un professionnel dans le domaine de la santé tout en poursuivant ses activités musicales.
-						Cette double compétence lui permet de toucher des publics variés et de développer un parcours personnel cohérent,
-						en phase avec l’évolution actuelle des profils hybrides.<br><br>
+						À travers ses projets, Mathéo montre qu’il est possible de concilier des centres d’intérêt
+						différents sans renoncer à l’un ou à l’autre.
+						Son objectif est de devenir un professionnel dans le domaine de la santé tout en poursuivant ses
+						activités musicales.
+						Cette double compétence lui permet de toucher des publics variés et de développer un parcours
+						personnel cohérent,
+						en phase avec l’évolution actuelle des profils hybrides.</p>
 
-						En alliant ses études de kinésithérapie à sa passion pour la musique, Mathéo façonne peu à peu un parcours à deux facettes:
-						d’un côté l’engagement professionnel, de l’autre l’expression artistique. Son chemin montre qu’il est possible de mener plusieurs projets de front,
+					<p>En alliant ses études de kinésithérapie à sa passion pour la musique, Mathéo façonne peu à peu un
+						parcours à deux facettes:
+						d’un côté l’engagement professionnel, de l’autre l’expression artistique. Son chemin montre
+						qu’il est possible de mener plusieurs projets de front,
 						tout en gardant une direction claire pour chacun de ses objectifs.</p>
 
+					<p>Ces cyphers offrent une opportunité rare pour les artistes de se faire remarquer, de collaborer
+						et d'être mis en lumière dans un environnement où les talents ne manquent pas mais peinent
+						souvent à être visibles. Miracle Wave se distingue par son approche collaborative et horizontale
+						: chacun y trouve sa place, peu importe son niveau d'expérience, tant que l'envie de créer est
+						présente.</p>
 
-					<h3 class="major">Article à suivre</h3>
-					<p>Découvrez d'autres articles :</p>
+					<p>Le projet crée un véritable tremplin, permettant aux participants de développer leur portfolio,
+						de tester leurs limites et d'apprendre au contact d'autres passionnés. La critique constructive
+						que l'on pourrait formuler concerne la structuration du projet : au vu de l'ampleur croissante
+						de ses activités (musique, vidéo, mode, événements, interviews), Miracle Wave pourrait
+						bénéficier d'une organisation plus formalisée et d'une identité visuelle encore plus affirmée.
+						Cela renforcerait son professionnalisme et son impact auprès du public comme des partenaires
+						potentiels.</p>
 
-					<section class="features">
+					<p>Pour le reste, Miracle Wave impressionne par sa capacité à fédérer, expérimenter et révéler des
+						talents. Porté par la vision de Koffy, le projet se présente comme une plateforme hybride,
+						moderne et ambitieuse, où l'art avance en équipe et où chaque vague créative nourrit la
+						suivante.</p>
+
+					<h3 class="major">Articles à suivre</h3>
+
+					<section class="features-grid">
 						<article>
-							<a href="pov.html" class="image"><img src="images/Album&cup.jpg"  alt="" /></a>
-							<h3 class="major">Miracle Wave</h3>
-							
+							<a href="pov.html" class="image"><img src="images/Album&cup.jpg" alt="Miracle Wave" /></a>
+							<h3 class="major">🌊 Miracle Wave</h3>
 						</article>
 						<article>
-							<a href="multi-casquette.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
-							<h3 class="major">Multi-Casquette</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-							<a href="multi-casquette.html" class="special">Voir plus</a>
+							<a href="multi-casquette.html" class="image"><img src="images/planinstru3.jpg"
+									alt="Multi-casquette" /></a>
+							<h3 class="major">🎹 Multi-casquette</h3>
 						</article>
 					</section>
+
 				</div>
 			</div>
+
 		</section>
 
 	</div>

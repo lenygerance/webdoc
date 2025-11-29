@@ -2,144 +2,280 @@
 <html>
 
 <head>
-	<title>Miracle Wave</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    <title>Miracle Wave</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        /* === ARTICLE PAGE STYLING === */
+        #wrapper header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        #wrapper header h2 {
+            font-size: 2.8em;
+            margin: 0 0 15px 0;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        #wrapper header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin: 0;
+        }
+
+        #wrapper header a {
+            color: #ffd;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        #wrapper header a:hover {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* === CONTENT STYLING === */
+        .wrapper .inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .wrapper .inner h3 {
+            font-size: 2.2em;
+            color: #1a1a1a;
+            margin: 50px 0 25px 0;
+            font-weight: 800;
+            border-bottom: 4px solid #ff6b6b;
+            padding-bottom: 12px;
+        }
+
+        .wrapper .inner h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .wrapper .inner h4 {
+            font-size: 1.6em;
+            color: #1a1a1a;
+            margin: 35px 0 20px 0;
+            font-weight: 700;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .wrapper .inner p {
+            font-size: 1.1em;
+            line-height: 1.9;
+            color: #ffffff;
+            text-align: justify;
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .wrapper .inner span.image {
+            margin: 25px 0;
+            display: block;
+        }
+
+        .wrapper .inner span.image.left {
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            max-width: 350px;
+        }
+
+        .wrapper .inner span.image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .wrapper .inner span.image img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);
+        }
+
+        /* === FEATURES GRID === */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .features-grid article {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .features-grid article:hover {
+            transform: scale(1.05) rotateY(2deg);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.2);
+        }
+
+        .features-grid .image {
+            display: block;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .features-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .features-grid article:hover img {
+            transform: scale(1.1);
+        }
+
+        .features-grid h3 {
+            padding: 20px;
+            margin: 0;
+            color: #1a1a1a;
+            font-size: 1.3em;
+            border-bottom: 2px solid #ff6b6b;
+        }
+
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            #wrapper header {
+                padding: 40px 20px;
+            }
+
+            #wrapper header h2 {
+                font-size: 2em;
+            }
+
+            .wrapper .inner {
+                padding: 0 20px;
+            }
+
+            .wrapper .inner p {
+                font-size: 1em;
+                text-align: left;
+            }
+
+            .wrapper .inner span.image.left {
+                float: none;
+                margin-right: 0;
+                max-width: 100%;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body class="is-preload">
 
-	<!-- Page Wrapper -->
-	<div id="page-wrapper">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
 
-		<!-- Header -->
-		<header id="header">
-			<h1><a href="index.html">Webdoc</a></h1>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">🎵 Webdoc</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<div class="inner">
-				<h2>Menu</h2>
-				<ul class="links">
-					<li><a href="index.html">Acceuil</a></li>
-					<li><a href="interview.html">Interview</a></li>
-					<li><a href="podcast.html">Podcast</a></li>
-					<li><a href="index.html#four">Articles</a></li>
-					<li><a href="best-of.html">Best OF</a></li>
-					<li><a href="galerie.html">Galerie Photos</a></li>
-				</ul>
-				<a href="#" class="close">Close</a>
-			</div>
-		</nav>
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="interview.html">Interview</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="index.html#four">Articles</a></li>
+                    <li><a href="best-of.html">Best OF</a></li>
+                    <li><a href="galerie.html">Galerie Photos</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
 
-		<!-- Wrapper -->
-		<section id="wrapper">
-			<header>
-				<div class="inner">
-					<h2>Article : Miracle wave</h2>
-					<p>Écrit par <a href="https://github.com/lenygerance">Lény.G</a></p>
-				</div>
-			</header>
+        <!-- Wrapper -->
+        <section id="wrapper">
+            <header>
+                <div class="inner">
+                    <h2>🌊 Miracle Wave</h2>
+                    <p>Écrit par <a href="https://github.com/lenygerance">Lény.G</a></p>
+                </div>
+            </header>
 
-			<!-- Content -->
-			<div class="wrapper">
-				<div class="inner">
+            <!-- Content -->
+            <div class="wrapper">
+                <div class="inner">
 
-					<h3 class="major">Miracle wave</h3>
-					<p>Lors de notre échange, Mathéo, alias Koffy, nous a présenté Miracle Wave — “La vague Miracle” et
-						dévoile l’essence d'un projet hybride qui dépasse largement la simple production
-						artistique.
-						Né en 2003, il revendique l’héritage d’une génération façonnée par Internet, l’accès immédiat à
-						la créativité et la volonté de transformer ses passions en moteur collectif.
-						Miracle Wave se présente comme une marque, un mouvement et un espace de collaboration,
-						réunissant jeunes artistes indépendants et amateurs autour d’un objectif commun :
-						Créer, apprendre et avancer ensemble.
-						<p> La musique en constitue le cœur battant, notamment grâce aux cyphers musicaux, ces sessions où
-						beatmakers et chanteurs unissent leurs talents pour produire un morceau accompagné d’un clip
-						commun. Ces laboratoires créatifs deviennent des vitrines révélant l’alchimie entre styles,
-						personnalités et compétences variées. Ils offrent aussi une chance unique à de jeunes talents —
-						paroliers, ingénieurs son, monteurs ou graphistes — de se faire repérer dans un environnement où
-						la visibilité reste souvent un obstacle.
+                    <h3 class="major">Miracle Wave</h3>
+                    <p>Lors de notre échange, Mathéo, alias Koffy, nous a présenté Miracle Wave — "La vague Miracle" et dévoile l'essence d'un projet hybride qui dépasse largement la simple production artistique. Né en 2003, il revendique l'héritage d'une génération façonnée par Internet, l'accès immédiat à la créativité et la volonté de transformer ses passions en moteur collectif.</p>
 
-						
-						<h4>Miracle Wave : l’Expansion</h4>
-						<p><span class="image left"><img src="images/logoMiracleWave.jpg" alt="" /></span>
-						Mais Miracle Wave ne s’arrête pas à la musique. Koffy développe également une branche textile,
-						proposant des vêtements comme des t-shirts, top-bacs, hoodies ou pantalons — dont certains sont
-						customisés par des artistes indépendants.
-						Les pièces sont ensuite portées par des mannequins amateurs et photographiées par des
-						photographes amateurs ou indépendants, renforçant l’aspect communautaire et accessible du
-						projet.
-						En parallèle, il documente les coulisses de ces collaborations : concerts, showcases, festivals,
-						préparation de clips avec maquilleurs et lieux réservés, répétitions de cyphers ou encore
-						interviews de ses artistes partenaires.
-						Ces contenus vidéos et photographiées offrent une immersion authentique dans la dynamique du
-						collectif, tout en montrant la réalité du travail artistique et la diversité des talents
-						impliqués.
-					
+                    <p>Miracle Wave se présente comme une marque, un mouvement et un espace de collaboration, réunissant jeunes artistes indépendants et amateurs autour d'un objectif commun : Créer, apprendre et avancer ensemble. La musique en constitue le cœur battant, notamment grâce aux cyphers musicaux, ces sessions où beatmakers et chanteurs unissent leurs talents pour produire un morceau accompagné d'un clip commun.</p>
 
-					
-						Ces cyphers et offrent une opportunité rare pour les artistes de se faire remarquer,
-						de collaborer et d’être mis en lumière dans un environnement où les talents ne manquent pas mais
-						peinent souvent à être visibles.
-						Miracle Wave se distingue par son approche collaborative et horizontale : chacun y trouve sa
-						place, peu importe son
-						niveau d’expérience, tant que l’envie de créer est présente. Le projet crée un véritable
-						tremplin, permettant aux participants
-						de développer leur portfolio, de tester leurs limites et d’apprendre au contact d’autres
-						passionnés.
+                    <p>Ces laboratoires créatifs deviennent des vitrines révélant l'alchimie entre styles, personnalités et compétences variées. Ils offrent aussi une chance unique à de jeunes talents — paroliers, ingénieurs son, monteurs ou graphistes — de se faire repérer dans un environnement où la visibilité reste souvent un obstacle.</p>
 
-						La critique constructive que l’on pourrait formuler concerne la structuration du projet :
-						au vu de l’ampleur croissante de ses activités (musique, vidéo, mode, événements, interviews),
-						Miracle Wave pourrait bénéficier d’une organisation plus formalisée et d’une identité visuelle
-						encore plus affirmée.
-						Cela renforcerait son professionnalisme et son impact auprès du public comme des partenaires
-						potentiels..
-							<br>
-							<br>
-						Pour le reste, Miracle Wave impressionne par sa capacité à fédérer, expérimenter et révéler des
-						talents. Porté par la vision de Koffy,
-						le projet se présente comme une plateforme hybride, moderne et ambitieuse, où l’art avance en
-						équipe et où chaque vague créative nourrit la suivante.
-					<p>
-					<h3 class="major">Article à suivre</h3>
-					<p>Découvrez d'autres articles sur différents points de vue :</p>
+                    <h4>Miracle Wave : l'Expansion</h4>
+                    <span class="image left"><img src="images/logoMiracleWave.jpg" alt="Logo Miracle Wave" /></span>
+                    
+                    <p>Mais Miracle Wave ne s'arrête pas à la musique. Koffy développe également une branche textile, proposant des vêtements comme des t-shirts, top-bacs, hoodies ou pantalons — dont certains sont customisés par des artistes indépendants. Les pièces sont ensuite portées par des mannequins amateurs et photographiées par des photographes amateurs ou indépendants, renforçant l'aspect communautaire et accessible du projet.</p>
 
-					<section class="features">
-						<article>
-							<a href="portrait.html" class="image"><img src="images koffy\_DSC6097.jpg" alt="" /></a>
-							<h3 class="major">Portrait de Koffy</h3>
-							
-						</article>
-						<article>
-							<a href="multi-casquette.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
-							<h3 class="major">Multi-Casquette</h3>
-							
-						</article>
-					</section>
+                    <p>En parallèle, il documente les coulisses de ces collaborations : concerts, showcases, festivals, préparation de clips avec maquilleurs et lieux réservés, répétitions de cyphers ou encore interviews de ses artistes partenaires. Ces contenus vidéos et photographiés offrent une immersion authentique dans la dynamique du collectif, tout en montrant la réalité du travail artistique et la diversité des talents impliqués.</p>
 
-				</div>
-			</div>
+                    <p>Ces cyphers offrent une opportunité rare pour les artistes de se faire remarquer, de collaborer et d'être mis en lumière dans un environnement où les talents ne manquent pas mais peinent souvent à être visibles. Miracle Wave se distingue par son approche collaborative et horizontale : chacun y trouve sa place, peu importe son niveau d'expérience, tant que l'envie de créer est présente.</p>
 
-		</section>
+                    <p>Le projet crée un véritable tremplin, permettant aux participants de développer leur portfolio, de tester leurs limites et d'apprendre au contact d'autres passionnés. La critique constructive que l'on pourrait formuler concerne la structuration du projet : au vu de l'ampleur croissante de ses activités (musique, vidéo, mode, événements, interviews), Miracle Wave pourrait bénéficier d'une organisation plus formalisée et d'une identité visuelle encore plus affirmée. Cela renforcerait son professionnalisme et son impact auprès du public comme des partenaires potentiels.</p>
 
-	</div>
+                    <p>Pour le reste, Miracle Wave impressionne par sa capacité à fédérer, expérimenter et révéler des talents. Porté par la vision de Koffy, le projet se présente comme une plateforme hybride, moderne et ambitieuse, où l'art avance en équipe et où chaque vague créative nourrit la suivante.</p>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+                    <h3 class="major">Articles à suivre</h3>
+
+                    <section class="features-grid">
+                        <article>
+                            <a href="portrait.html" class="image"><img src="images koffy/_DSC6097.jpg" alt="Portrait de Koffy" /></a>
+                            <h3 class="major">🎭 Portrait de Koffy</h3>
+                        </article>
+                        <article>
+                            <a href="multi-casquette.html" class="image"><img src="images/planinstru3.jpg" alt="Multi-Casquette" /></a>
+                            <h3 class="major">🎹 Multi-Casquette</h3>
+                        </article>
+                    </section>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 

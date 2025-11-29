@@ -1,505 +1,527 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>L'homme derrière le beat</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <style>
-            /* === BANNER SECTION === */
-            #banner {
-                background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d1b69 100%);
-                position: relative;
-                overflow: hidden;
-                padding: 120px 40px;
-                text-align: center;
-                min-height: 600px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            #banner::before {
-                content: '';
-                position: absolute;
-                width: 500px;
-                height: 500px;
-                background: radial-gradient(circle, rgba(255, 107, 107, 0.15) 0%, transparent 70%);
-                border-radius: 50%;
-                top: -150px;
-                right: -150px;
-                animation: float 8s ease-in-out infinite;
-                z-index: 1;
-            }
-            
-            #banner::after {
-                content: '';
-                position: absolute;
-                width: 300px;
-                height: 300px;
-                background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
-                border-radius: 50%;
-                bottom: -100px;
-                left: -100px;
-                animation: float 10s ease-in-out infinite reverse;
-                z-index: 1;
-            }
-            
-            #banner .inner {
-                position: relative;
-                z-index: 2;
-                max-width: 800px;
-            }
-            
-            #banner .logo {
-                display: inline-block;
-                font-size: 4em;
-                margin-bottom: 30px;
-                animation: pulse 2s ease-in-out infinite;
-            }
-            
-            #banner h2 {
-                font-size: 3.5em;
-                font-weight: 700;
-                color: #ffffff;
-                margin: 20px 0;
-                letter-spacing: -1px;
-                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-                line-height: 1.2;
-            }
-            
-            #banner p {
-                font-size: 1.2em;
-                color: rgba(255, 255, 255, 0.9);
-                margin: 20px 0;
-                line-height: 1.6;
-            }
-            
-            #banner a {
-                color: #ff6b6b;
-                text-decoration: none;
-                font-weight: 600;
-                transition: all 0.3s ease;
-            }
-            
-            #banner a:hover {
-                color: #ffffff;
-                text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
-            }
-            
-            @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-30px); }
-            }
-            
-            @keyframes pulse {
-                0%, 100% { transform: scale(1); }
-                50% { transform: scale(1.1); }
-            }
-            
-            /* === SPOTLIGHT SECTIONS === */
-            .wrapper.spotlight {
-                padding: 80px 40px;
-                position: relative;
-                overflow: hidden;
-            }
-            
-            .wrapper.spotlight .inner {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 60px;
-                align-items: center;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-            
-            .wrapper.spotlight.alt .inner {
-                grid-template-columns: 1fr 1fr;
-                direction: rtl;
-            }
-            
-            .wrapper.spotlight.alt .inner > * {
-                direction: ltr;
-            }
-            
-            .wrapper.spotlight .image {
-                position: relative;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-                transition: all 0.4s ease;
-            }
-            
-            .wrapper.spotlight .image:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 30px 80px rgba(255, 107, 107, 0.2);
-            }
-            
-            .wrapper.spotlight .image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-                transition: transform 0.4s ease;
-            }
-            
-            .wrapper.spotlight .image:hover img {
-                transform: scale(1.05);
-            }
-            
-            .wrapper.spotlight .content {
-                padding: 20px;
-            }
-            
-            .wrapper.spotlight h2.major {
-                font-size: 2.2em;
-                color: #1a1a1a;
-                margin-bottom: 20px;
-                font-weight: 700;
-                letter-spacing: -0.5px;
-            }
-            
-            .wrapper.spotlight p {
-                font-size: 1.1em;
-                color: #555555;
-                line-height: 1.7;
-                margin-bottom: 25px;
-            }
-            
-            .wrapper.spotlight .special {
-                display: inline-block;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-                padding: 12px 30px;
-                border-radius: 50px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: all 0.3s ease;
-                box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
-            }
-            
-            .wrapper.spotlight .special:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
-                background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-            }
-            
-            /* === STYLE VARIATIONS === */
-            .wrapper.style1 {
-                background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
-            }
-            
-            .wrapper.style2 {
-                background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
-            }
-            
-            .wrapper.style3 {
-                background: linear-gradient(to left, rgba(102, 126, 234, 0.05), transparent);
-            }
-            
-            /* === FOUR SECTION === */
-            #four {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-            }
-            
-            #four .highlight-section {
-                background: transparent;
-                padding: 40px 0;
-                margin: 0 0 40px 0;
-                border-radius: 0;
-            }
-            
-            #four .highlight-section h2 {
-                font-size: 2.8em;
-                color: white;
-            }
-            
-            #four .highlight-section p {
-                color: rgba(255, 255, 255, 0.95);
-            }
-            
-            #four .features-grid {
-                margin-top: 20px;
-            }
-            
-            #four .features-grid article {
-                background: rgba(255, 255, 255, 0.95);
-                border-left: 5px solid #ff6b6b;
-            }
-            
-            /* Amélioration lisibilité descriptions (taille + couleurs selon style) */
-.wrapper.spotlight .content p {
-    font-size: 1.25em;
-    line-height: 1.85;
-    margin-bottom: 25px;
-    font-weight: 500;
-}
 
-/* textes sombres sur fonds clairs */
-.wrapper.style1 .content p,
-.wrapper.style2 .content p {
-    color: rgba(20, 20, 20, 0.96);
-    text-shadow: none;
-}
+<head>
+    <title>L'homme derrière le beat</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        /* === BANNER SECTION === */
+        #banner {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d1b69 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 120px 40px;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* texte clair sur fonds bleutés */
-.wrapper.style3 .content p {
-    color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
-}
+        #banner::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -150px;
+            right: -150px;
+            animation: float 8s ease-in-out infinite;
+            z-index: 1;
+        }
 
-/* === FOUR : agrandir et unifier les articles === */
-#four {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-}
+        #banner::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+            animation: float 10s ease-in-out infinite reverse;
+            z-index: 1;
+        }
 
-#four .features-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 36px;
-    margin-top: 28px;
-}
+        #banner .inner {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
 
-/* articles plus grands et plus aérés */
-#four .features-grid article {
-    background: rgba(255, 255, 255, 0.98);
-    border-left: 6px solid #ff6b6b;
-    border-radius: 14px;
-    overflow: hidden;
-    min-height: 360px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
-    padding-bottom: 10px;
-}
+        #banner .logo {
+            display: inline-block;
+            font-size: 4em;
+            margin-bottom: 30px;
+            animation: pulse 2s ease-in-out infinite;
+        }
 
-/* zone image plus haute pour donner plus d'impact */
-#four .features-grid .image {
-    height: 300px;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
+        #banner h2 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 20px 0;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
 
-/* titre plus visible dans les articles */
-#four .features-grid h3 {
-    padding: 22px;
-    margin: 0;
-    color: #1a1a1a;
-    font-size: 1.45em;
-    border-bottom: 2px solid #ff6b6b;
-    background: transparent;
-}
+        #banner p {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 20px 0;
+            line-height: 1.6;
+        }
 
-/* hover plus doux mais visible */
-#four .features-grid article:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
-}
-            
-            /* === RESPONSIVE === */
-            @media (max-width: 768px) {
-                #banner h2 {
-                    font-size: 2.2em;
-                }
-                
-                #banner p {
-                    font-size: 1em;
-                }
-                
-                .wrapper.spotlight .inner {
-                    grid-template-columns: 1fr;
-                    gap: 30px;
-                }
-                
-                .wrapper.spotlight.alt .inner {
-                    direction: ltr;
-                }
-                
-                .wrapper.spotlight h2.major {
-                    font-size: 1.8em;
-                }
+        #banner a {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        #banner a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
             }
-            
-            /* === FEATURES GRID === */
-            .features-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 30px;
-                margin-top: 40px;
+
+            50% {
+                transform: translateY(-30px);
             }
-            
-            .features-grid article {
-                background: white;
-                border-radius: 12px;
-                overflow: hidden;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-                transition: all 0.3s ease;
-                border-left: 5px solid #ff6b6b;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
             }
-            
-            .features-grid article:hover {
-                transform: scale(1.05) rotateY(2deg);
-                box-shadow: 0 15px 40px rgba(255,107,107,0.2);
-            }
-            
-            .features-grid .image {
-                display: block;
-                width: 100%;
-                height: 220px;
-                overflow: hidden;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            }
-            
-            .features-grid img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: transform 0.3s;
-            }
-            
-            .features-grid article:hover img {
+
+            50% {
                 transform: scale(1.1);
             }
-            
-            .features-grid h3 {
-                padding: 20px;
-                margin: 0;
-                color: #1a1a1a;
-                font-size: 1.3em;
-                border-bottom: 2px solid #ff6b6b;
+        }
+
+        /* === SPOTLIGHT SECTIONS === */
+        .wrapper.spotlight {
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrapper.spotlight .inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .wrapper.spotlight.alt .inner {
+            grid-template-columns: 1fr 1fr;
+            direction: rtl;
+        }
+
+        .wrapper.spotlight.alt .inner>* {
+            direction: ltr;
+        }
+
+        .wrapper.spotlight .image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .wrapper.spotlight .image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(255, 107, 107, 0.2);
+        }
+
+        .wrapper.spotlight .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .wrapper.spotlight .image:hover img {
+            transform: scale(1.05);
+        }
+
+        .wrapper.spotlight .content {
+            padding: 20px;
+        }
+
+        .wrapper.spotlight h2.major {
+            font-size: 2.2em;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .wrapper.spotlight p {
+            font-size: 1.1em;
+            color: #555555;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .wrapper.spotlight .special {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .wrapper.spotlight .special:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        /* === STYLE VARIATIONS === */
+        .wrapper.style1 {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+        }
+
+        .wrapper.style2 {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+        }
+
+        .wrapper.style3 {
+            background: linear-gradient(to left, rgba(102, 126, 234, 0.05), transparent);
+        }
+
+        /* === FOUR SECTION === */
+        #four {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        #four .highlight-section {
+            background: transparent;
+            padding: 40px 0;
+            margin: 0 0 40px 0;
+            border-radius: 0;
+        }
+
+        #four .highlight-section h2 {
+            font-size: 2.8em;
+            color: white;
+        }
+
+        #four .highlight-section p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        #four .features-grid {
+            margin-top: 20px;
+        }
+
+        #four .features-grid article {
+            background: rgba(255, 255, 255, 0.95);
+            border-left: 5px solid #ff6b6b;
+        }
+
+        /* Amélioration lisibilité descriptions (taille + couleurs selon style) */
+        .wrapper.spotlight .content p {
+            font-size: 1.25em;
+            line-height: 1.85;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        /* textes sombres sur fonds clairs */
+        .wrapper.style1 .content p,
+        .wrapper.style2 .content p {
+            color: rgba(20, 20, 20, 0.96);
+            text-shadow: none;
+        }
+
+        /* texte clair sur fonds bleutés */
+        .wrapper.style3 .content p {
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        /* === FOUR : agrandir et unifier les articles === */
+        #four {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        #four .features-grid {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 36px;
+            margin-top: 28px;
+        }
+
+        /* articles plus grands et plus aérés */
+        #four .features-grid article {
+            background: rgba(255, 255, 255, 0.98);
+            border-left: 6px solid #ff6b6b;
+            border-radius: 14px;
+            overflow: hidden;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        /* zone image plus haute pour donner plus d'impact */
+        #four .features-grid .image {
+            height: 300px;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* titre plus visible dans les articles */
+        #four .features-grid h3 {
+            padding: 22px;
+            margin: 0;
+            color: #1a1a1a;
+            font-size: 1.45em;
+            border-bottom: 2px solid #ff6b6b;
+            background: transparent;
+        }
+
+        /* hover plus doux mais visible */
+        #four .features-grid article:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            #banner h2 {
+                font-size: 2.2em;
             }
-            
-            .highlight-section {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-                padding: 60px 40px;
-                border-radius: 15px;
-               
-                text-align: center;
+
+            #banner p {
+                font-size: 1em;
             }
-            
-            .highlight-section h2 {
-                font-size: 2.5em;
-                margin-bottom: 15px;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+
+            .wrapper.spotlight .inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
-        </style>
-    </head>
-    <body class="is-preload">
 
-        <!-- Page Wrapper -->
-            <div id="page-wrapper">
+            .wrapper.spotlight.alt .inner {
+                direction: ltr;
+            }
 
-                <!-- Header -->
-                    <header id="header" class="alt">
-                        <h1><a href="index.html">🎵 Webdoc.</a></h1>
-                        <nav>
-                            <a href="#menu">Menu</a>
-                        </nav>
-                    </header>
+            .wrapper.spotlight h2.major {
+                font-size: 1.8em;
+            }
+        }
 
-                <!-- Menu -->
-                    <nav id="menu">
-                        <div class="inner">
-                            <h2>Menu</h2>
-                            <ul class="links">
-                                <li><a href="index.html">Acceuil</a></li>
-                                <li><a href="interview.html">Interview</a></li>
-                                <li><a href="podcast.html">Podcast</a></li>
-                                <li><a href="index.html#four">Articles</a></li>
-                                <li><a href="best-of.html">Best OF</a></li>
-                                <li><a href="galerie.html">Galerie Photos</a></li>
-                            </ul>
-                            <a href="#" class="close">Close</a>
-                        </div>
-                    </nav>
+        /* === FEATURES GRID === */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-                <!-- Banner -->
-                    <section id="banner">
-                        <div class="inner">
-                            <div class="logo"><span class="icon fa-gem"></span></div>
-                            <h2>L'homme derrière le beat</h2>
-                            <p>Découvrez l'univers de Koffy • Fait par <a href="https://github.com/Dylan-Maudet">Dylan.M</a>, <a href="https://github.com/Oceane-Lufundu">Oceane.L</a> et <a href="https://github.com/lenygerance">Lény.G</a></p>
-                        </div>
-                    </section>
+        .features-grid article {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #ff6b6b;
+        }
 
-                <!-- Wrapper -->
-                    <section id="wrapper">
+        .features-grid article:hover {
+            transform: scale(1.05) rotateY(2deg);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.2);
+        }
 
-                        <!-- One -->
-                            <section id="one" class="wrapper spotlight style1">
-                                <div class="inner">
-                                    <div class="image"><img src="images/sologuitare.jpg" alt="Interview" /></div>
-                                    <div class="content">
-                                        <h2 class="major">🎤 Interview</h2>
-                                        <p>Notre équipe est aller rencontré Mathéo, un étudiant qui est à la fois Beatmaker et Producteur </p>
-                                        <a href="interview.html" class="special">Voir plus →</a>
-                                    </div>
-                                </div>
-                            </section>
+        .features-grid .image {
+            display: block;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
 
-                        <!-- Two -->
-                            <section id="two" class="wrapper alt spotlight style2">
-                                <div class="inner">
-                                    <div class="image"><img src="images/planprod2.jpg" alt="Podcast" /></div>
-                                    <div class="content">
-                                        <h2 class="major">🎧 Podcast</h2>
-                                        <p>Dans cette audio de quelquess minutes, écouter des anecdotes de Mathéo "Koffy" </p>
-                                        <a href="podcast.html" class="special">Voir plus →</a>
-                                    </div>
-                                </div>
-                            </section>
+        .features-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
 
-                        <!-- Three -->
-                            <section id="three" class="wrapper spotlight style3">
-                                <div class="inner">
-                                    <div class="image"><img src="images/sac_custom(bon-angle).jpg" alt="Galerie" /></div>
-                                    <div class="content">
-                                        <h2 class="major">📸 Galerie</h2>
-                                        <p>Plongez dans l'univers visuel et créatif de Koffy</p>
-                                        <a href="galerie.html" class="special">Voir plus →</a>
-                                    </div>
-                                </div>
-                            </section>
+        .features-grid article:hover img {
+            transform: scale(1.1);
+        }
 
-                        <!-- Four -->
-                            <section id="four" class="wrapper alt style1">
-                                <div class="highlight-section">
-                                    <h2>✨ Articles & Galerie</h2>
-                                    <p style="font-size: 1.1em;">Nos 3 articles sur Koffy</p>
-                                </div>
-                                <div class="inner">
-                                    <section class="features-grid">
-                                        <article>
-                                            <a href="portrait.html" class="image"><img src="images koffy/_DSC6097.jpg" alt="Portrait Koffy" /></a>
-                                            <h3 class="major">🎭 Koffy</h3>
-                                        </article>
-                                        <article>
-                                            <a href="pov.html" class="image"><img src="images/Album&cup.jpg" alt="Miracle Wave" /></a>
-                                            <h3 class="major">🌊 Miracle Wave</h3>
-                                        </article>
-                                        <article>
-                                            <a href="multi-casquette.html" class="image"><img src="images/planinstru3.jpg" alt="Multi-casquette" /></a>
-                                            <h3 class="major">🎹 Multi-casquette</h3>
-                                        </article>
-                                       
-                                    </section>
-                                </div>
-                            </section>
+        .features-grid h3 {
+            padding: 20px;
+            margin: 0;
+            color: #1a1a1a;
+            font-size: 1.3em;
+            border-bottom: 2px solid #ff6b6b;
+        }
 
-                    </section>
+        .highlight-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
 
+            text-align: center;
+        }
+
+        .highlight-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">🎵 Webdoc.</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="interview.html">Interview</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="index.html#four">Articles</a></li>
+                    <li><a href="best-of.html">Best OF</a></li>
+                    <li><a href="galerie.html">Galerie Photos</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
             </div>
+        </nav>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <div class="logo"><span class="icon fa-gem"></span></div>
+                <h2>L'homme derrière le beat</h2>
+                <p>Découvrez l'univers de Koffy • Fait par <a href="https://github.com/Dylan-Maudet">Dylan.M</a>, <a
+                        href="https://github.com/Oceane-Lufundu">Oceane.L</a> et <a
+                        href="https://github.com/lenygerance">Lény.G</a></p>
+            </div>
+        </section>
 
-    </body>
+        <!-- Wrapper -->
+        <section id="wrapper">
+
+            <!-- One -->
+            <section id="one" class="wrapper spotlight style1">
+                <div class="inner">
+                    <div class="image"><img src="images/sologuitare.jpg" alt="Interview" /></div>
+                    <div class="content">
+                        <h2 class="major">🎤 Interview</h2>
+                        <p>Notre équipe est aller rencontré Mathéo, un étudiant qui est à la fois Beatmaker et
+                            Producteur </p>
+                        <a href="interview.html" class="special">Voir plus</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Two -->
+            <section id="two" class="wrapper alt spotlight style2">
+                <div class="inner">
+                    <div class="image"><img src="images/planprod2.jpg" alt="Podcast" /></div>
+                    <div class="content">
+                        <h2 class="major">🎧 Podcast</h2>
+                        <p>Dans cette audio de quelquess minutes, écouter des anecdotes de Mathéo "Koffy" </p>
+                        <a href="podcast.html" class="special">Voir plus </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Three -->
+            <section id="three" class="wrapper spotlight style3">
+                <div class="inner">
+                    <div class="image"><img src="images/sac_custom(bon-angle).jpg" alt="Galerie" /></div>
+                    <div class="content">
+                        <h2 class="major">📸 Galerie</h2>
+                        <p>Plongez dans l'univers visuel et créatif de Koffy</p>
+                        <a href="galerie.html" class="special">Voir plus </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Four -->
+            <section id="four" class="wrapper alt style1">
+                <div class="highlight-section">
+                    <h2>✨ Articles & Galerie</h2>
+                </div>
+                <div class="inner">
+                    <section class="features-grid">
+                        <article>
+                            <a href="portrait.html" class="image"><img src="images koffy/_DSC6097.jpg"
+                                    alt="Portrait Koffy" /></a>
+                            <h3 class="major">🎭 Portrait de Koffy</h3>
+                        </article>
+                        <article>
+                            <a href="pov.html" class="image"><img src="images/Album&cup.jpg" alt="Miracle Wave" /></a>
+                            <h3 class="major">🌊 Miracle Wave</h3>
+                        </article>
+                        <article>
+                            <a href="multi-casquette.html" class="image"><img src="images/planinstru3.jpg"
+                                    alt="Multi-casquette" /></a>
+                            <h3 class="major">🎹 Multi-casquette</h3>
+                        </article>
+
+                    </section>
+                </div>
+            </section>
+
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>

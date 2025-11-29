@@ -1,87 +1,377 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>multi-casquette</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<head>
+	<title>Miracle Wave</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<style>
+		/* === ARTICLE PAGE STYLING === */
+		#wrapper header {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 60px 40px;
+			text-align: center;
+			margin-top: 60px;
+		}
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Webdoc</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+		#wrapper header h2 {
+			font-size: 2.8em;
+			margin: 0 0 15px 0;
+			font-weight: 800;
+			letter-spacing: -1px;
+		}
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Acceuil</a></li>
-								<li><a href="interview.html">Interview</a></li>
-								<li><a href="podcast.html">Podcast</a></li>
-								<li><a href="index.html#four">Articles</a></li>
-								<li><a href="best-of.html">Best OF</a></li>
-								<li><a href="galerie.html">Galerie Photos</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+		#wrapper header p {
+			font-size: 1.1em;
+			opacity: 0.95;
+			margin: 0;
+		}
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Article : Multi-Casquette</h2>
-								<p>Écrit par <a href="https://github.com/Dylan-Maudet">Dylan.M</a></p>
-							</div>
-						</header>
+		#wrapper header a {
+			color: #ffd;
+			text-decoration: none;
+			font-weight: 600;
+			transition: all 0.3s ease;
+		}
 
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
+		#wrapper header a:hover {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+		}
 
-									<h3 class="major">Multi-Casquette</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
+		/* === CONTENT STYLING === */
+		.wrapper .inner {
+			max-width: 900px;
+			margin: 0 auto;
+		}
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+		.wrapper .inner h3 {
+			font-size: 2.2em;
+			color: #1a1a1a;
+			margin: 50px 0 25px 0;
+			font-weight: 800;
+			border-bottom: 4px solid #ff6b6b;
+			padding-bottom: 12px;
+		}
 
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+		.wrapper .inner h3:first-of-type {
+			margin-top: 0;
+		}
 
-									<section class="features">
-										<article>
-											<a href="pov.html" class="image"><img src="images/Album&cup.jpg"  alt="" /></a>
-											<h3 class="major">Miracle Wave</h3>
-										</article>
-										<article>
-											<a href="portrait.html" class="image"><img src="images koffy\_DSC6097.jpg" alt="" /></a>
-											<h3 class="major">Portrait de Koffy</h3>
-										</article>
-									</section>
+		.wrapper .inner h4 {
+			font-size: 1.6em;
+			color: #1a1a1a;
+			margin: 35px 0 20px 0;
+			font-weight: 700;
+			border-left: 5px solid #667eea;
+			padding-left: 15px;
+		}
 
-								</div>
-							</div>
+		.wrapper .inner p {
+			font-size: 1.1em;
+			line-height: 1.9;
+			color: #ffffff;
+			text-align: justify;
+			margin-bottom: 20px;
+			letter-spacing: 0.3px;
+		}
 
+		.wrapper .inner span.image {
+			margin: 25px 0;
+			display: block;
+		}
+
+		.wrapper .inner span.image.left {
+			float: left;
+			margin-right: 30px;
+			margin-bottom: 20px;
+			max-width: 350px;
+		}
+
+		.wrapper .inner span.image img {
+			width: 100%;
+			height: auto;
+			border-radius: 12px;
+			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+			transition: transform 0.3s ease;
+		}
+
+		.wrapper .inner span.image img:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);
+		}
+
+		/* === FEATURES GRID === */
+		.features-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 30px;
+			margin-top: 40px;
+		}
+
+		.features-grid article {
+			background: white;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+			transition: all 0.3s ease;
+			border-left: 5px solid #ff6b6b;
+		}
+
+		.features-grid article:hover {
+			transform: scale(1.05) rotateY(2deg);
+			box-shadow: 0 15px 40px rgba(255, 107, 107, 0.2);
+		}
+
+		.features-grid .image {
+			display: block;
+			width: 100%;
+			height: 220px;
+			overflow: hidden;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		}
+
+		.features-grid img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s;
+		}
+
+		.features-grid article:hover img {
+			transform: scale(1.1);
+		}
+
+		.features-grid h3 {
+			padding: 20px;
+			margin: 0;
+			color: #1a1a1a;
+			font-size: 1.3em;
+			
+		}
+
+
+		/* === RESPONSIVE === */
+		@media (max-width: 768px) {
+			#wrapper header {
+				padding: 40px 20px;
+			}
+
+			#wrapper header h2 {
+				font-size: 2em;
+			}
+
+			.wrapper .inner {
+				padding: 0 20px;
+			}
+
+			.wrapper .inner p {
+				font-size: 1em;
+				text-align: left;
+			}
+
+			.wrapper .inner span.image.left {
+				float: none;
+				margin-right: 0;
+				max-width: 100%;
+			}
+
+			.features {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">🎵 Webdoc</a></h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Acceuil</a></li>
+					<li><a href="interview.html">Interview</a></li>
+					<li><a href="podcast.html">Podcast</a></li>
+					<li><a href="index.html#four">Articles</a></li>
+					<li><a href="best-of.html">Best OF</a></li>
+					<li><a href="galerie.html">Galerie Photos</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>🎹 Multi-casquette</h2>
+					<p>Écrit par <a href="https://github.com/Dylan-Maudet">Dylan.M</a></a></p>
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+
+					<h3 class="major">Multi-casquette</h3>
+					<h4>Comment gérer sa vie perso/pro quand on est artiste émergent ?</h4>
+					<p>
+						Les dessous de l’art de vivre à double rythme
+						Tu passes tes nuits en studio et tes journées à jongler entre cours, responsabilités et
+						deadlines ? Tu n’es clairement pas seul.
+						Pour beaucoup d’artistes émergents comme Mathéo, alias Koffy, beatmaker-producteur indépendant
+						de 22 ans, fondateur du collectif Miracle Wave et étudiant en kiné, la vie ressemble parfois à
+						un enchaînement de sprints où le repos n’est jamais vraiment prévu. Entre une passion dévorante
+						qui demande du temps, de l’investissement et de l’énergie, et une formation exigeante qui impose
+						rigueur et constance, maintenir un équilibre relève presque du défi olympique.
+					</p>
+
+					<p>Ce contraste crée souvent un sentiment de tiraillement. Comment donner le meilleur de soi
+						artistiquement sans négliger sa santé, ses relations ou ses objectifs personnels ? Comment
+						assumer ses ambitions sans laisser ses obligations s’effondrer autour de soi ?
+						Dans cet article, inspiré du parcours de Koffy et de son collectif Miracle Wave, on te partage
+						des pistes concrètes pour rester aligné, efficace et créatif… sans t’épuiser.
+					</p>
+
+					<h4>Le paradoxe de l’artiste émergent : une vie à deux vitesses</h4>
+					<span class="image left"><img src="images koffy/P1024902.jpg" alt="Logo Miracle Wave" /></span>
+
+					<p>
+						Être artiste émergent, c’est accepter de vivre entre deux pôles qui s’opposent parfois.
+						D’un côté, la quête artistique : créer, produire, peaufiner son identité, chercher son public,
+						trouver sa place dans un milieu qui bouge vite. De l’autre, la réalité du quotidien : études,
+						travail, factures, responsabilités familiales. Ce n’est pas un choix entre passion et raison,
+						mais plutôt un funambulisme permanent.
+						Koffy en fait l’expérience tous les jours. Les enregistrements tardifs, les projets à avancer
+						pour Miracle Wave, les révisions à caser entre deux sessions, les rendez-vous, les
+						collaborations à gérer… Tout cela donne parfois la sensation de mener deux vies simultanées.
+						Et malgré un entourage numérique souvent très présent, l’artiste indépendant peut ressentir une
+						grande solitude. Car derrière l’image, il y a aussi toute la gestion invisible : communication,
+						planning, argent, matériel, stratégie. Être indépendant, c’est être créateur, manager,
+						graphiste, community manager et comptable en même temps.
+						Ce paradoxe crée une pression silencieuse : avancer vite, se renouveler, ne pas “rater le
+						train”. Pourtant, ces difficultés sont normales. Elles n’indiquent pas un manque de talent, mais
+						simplement que tu es en train de construire quelque chose.
+					</p>
+					<h4>Gestion du temps : une question d’organisation et de sacrifices</h4>
+					<p>
+						Quand la passion et les obligations se percutent, le temps devient une ressource rare et
+						précieuse. La plupart des artistes émergents n’ont pas d’horaires fixes : l’inspiration apparaît
+						quand elle veut, les collaborations demandent de la flexibilité, et les deadlines arrivent
+						souvent plus vite que prévu.
+						La clé, c’est une organisation flexible, qui structure sans enfermer.
+						Créer une routine modulable : Koffy a trouvé son rythme. Le matin, c’est kiné : cours,
+						révisions, stages. L’après-midi et le début de soirée, c’est dédié à la production musicale, au
+						développement de Miracle Wave et aux sessions créatives. Un cadre souple, mais réel.
+						Optimiser le temps : utiliser des méthodes comme Pomodoro pour éviter la dispersion, tenir un
+						agenda clair, prévoir des créneaux “créatifs” et d’autres réservés à la gestion.
+						Apprendre à dire non : peut-être la compétence la plus difficile. Renoncer à certaines sorties,
+						refuser un projet non prioritaire, choisir ses collaborations. Non pas pour s’isoler, mais pour
+						rester cohérent avec ses objectifs.
+						L’idée n’est pas de chercher la perfection, mais le progrès continu. Un tempo régulier vaut
+						mieux qu’un sprint suivi d’une chute.
+					</p>
+					<h4>L’artiste vs l’étudiant/professionnel : naviguer entre deux mondes</h4>
+
+					<p>
+						Étudier la kiné tout en construisant un projet artistique solide, c’est accepter des semaines où
+						le temps semble se contracter. Entre un examen crucial et un beat à finaliser pour un artiste du
+						collectif, les dilemmes peuvent devenir un quotidien.
+						Mais ce “double projet” n’est pas qu’une contrainte : c’est aussi une force.
+						Il apporte une stabilité, une sécurité future et un cadre qui aide à rester ancré. Il pousse à
+						gérer son temps, à prendre des décisions plus stratégiques, à ne pas se disperser.
+						Ce qui change tout, c’est :
+						Le soutien de l’entourage : la famille qui comprend les absences, les amis qui encouragent, les
+						membres de Miracle Wave qui partagent les mêmes défis.
+						La communication : expliquer son rythme, prévenir ses périodes de surcharge, éviter les
+						frustrations.
+						L’adaptation constante : il n’y a pas de parfait équilibre, seulement des ajustements semaine
+						après semaine.
+					</p>
+
+					<h4>Préserver son bien-être mental : éviter le burn-out</h4>
+					<p>
+						La pression de réussir vite, la comparaison permanente sur les réseaux, le rythme décalé… tout
+						cela peut peser lourd. Beaucoup d’artistes émergents sous-estiment le risque de burn-out
+						créatif.
+						Pour durer, il faut prendre soin de soi autant que de sa musique :
+						Garder un minimum de sommeil, même en période de rush.
+						Pratiquer un sport ou simplement marcher pour relâcher les tensions.
+						S’accorder des moments off, sans culpabilité : une soirée loin du studio peut parfois débloquer
+						une semaine de créativité.
+						Être attentif aux signaux d’alerte : fatigue intense, perte d’envie, inspiration absente,
+						irritabilité, sensation d’être “vidé”.
+						Koffy l’a compris : pour créer des prods qui touchent, il doit rester aligné physiquement et
+						mentalement. La créativité est un muscle — et comme tout muscle, elle a besoin de repos.
+					</p>
+
+					<h4>Créer un environnement favorable à l’équilibre</h4>
+					<p>
+						L’espace dans lequel on crée influence énormément la clarté d’esprit. Avoir un coin studio, même
+						minimaliste, permet de distinguer travail et détente.
+						Le collectif Miracle Wave joue aussi un rôle essentiel. Collaborer, échanger, se soutenir entre
+						artistes : cela enlève une grande partie de la charge mentale liée à l’isolement. On progresse
+						mieux, et on traverse les doutes plus facilement.
+						Construire son équilibre, c’est accepter qu’il évolue : un rythme fonctionne un temps, puis doit
+						être réajusté. La flexibilité est une force, pas une faiblesse.
+
+						Trouver l’équilibre sans perdre de vue ses rêves
+						Gérer une vie à deux vitesses n’a rien d’évident. Mais avec une organisation bien pensée, une
+						vision claire et une écoute sincère de soi-même, il est possible de progresser sans se perdre.
+						L’essentiel à retenir :
+						Priorise ce qui compte vraiment.
+						Respire.
+						Structure ton temps.
+						Protège ton énergie.
+						Tu es ton propre instrument. Prends-en soin pour pouvoir jouer longtemps.
+						Et toi, comment gères-tu tes deux vies ?
+					</p>
+
+					<h3 class="major">Articles à suivre</h3>
+
+					<section class="features-grid">
+						<article>
+							<a href="portrait.html" class="image"><img src="images koffy/_DSC6097.jpg"
+									alt="Portrait de Koffy" /></a>
+							<h3 class="major">🎭 Portrait de Koffy</h3>
+						</article>
+						<article>
+							<a href="pov.html" class="image"><img src="images/Album&cup.jpg" alt="Miracle Wave" /></a>
+							<h3>🌊 Miracle Wave</h3>
+						</article>
 					</section>
 
+				</div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		</section>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>

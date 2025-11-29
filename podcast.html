@@ -38,37 +38,46 @@
 
 				<!-- Wrapper -->
 					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Podcast</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
-							</div>
-						</header>
+						
 
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
 
-									<h3 class="major">Podcast</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+									<!-- Audio Player Section -->
+									<section class="audio-section">
+										<h3 class="major">🎙️ Podcast </h3>
+										<div class="audio-container">
+											<audio controls style="width: 100%; margin-bottom: 20px;">
+												<source src="audio/podcast-koffy.mp3" type="audio/mpeg">
+												Votre navigateur ne supporte pas la balise audio.
+											</audio>
+										</div>
+										<p class="audio-info"> 📅 Enregistré : Novembre 2025</p>
+									</section>
 
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<!-- Transcription / Description -->
+									<section class="podcast-description">
+											<h4>Points clés abordés :</h4>
+										<ul style="line-height: 2; color: #555;">
+											<li>🎵 Point de vue d'un beatmaker</li>
+											<li>🎧 Le processus de production d'un beat</li>
+																	</ul>
+									</section>
+
+									<hr style="margin: 40px 0; border: none; border-top: 2px solid #ddd;">
 
 									<section class="features">
 										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Interview</h3>
-											<p>Notre équipe est aller rencontré Mathéo, un étudiant qui est à la fois Beatmaker et Producteur</p>
-											<a href="interview.html" class="special">Voir plus</a>
+											<a href="interview.html" class="image"><img src="images/sologuitare.jpg" alt="Interview" /></a>
+											<h3 class="major">🎬 Interview</h3>
+											
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Best-Of</h3>
-											<p>Une compilation de petits moments enregistré par nos caméras</p>
-											<a href="best-of.html" class="special">Voir plus</a>
+											<a href="best-of.html" class="image"><img src="images/planinterview3.jpg" alt="Best-Of" /></a>
+											<h3 class="major">🏆 Best-Of</h3>
+											
 										</article>
 									</section>
 
@@ -86,6 +95,99 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<style>
+			/* Audio Section */
+			.audio-section {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				padding: 40px;
+				border-radius: 15px;
+				margin: 40px 0;
+				box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+			}
+
+			.audio-container {
+				background: rgba(255, 255, 255, 0.95);
+				padding: 25px;
+				border-radius: 12px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+			}
+
+			.audio-container audio {
+				outline: none;
+			}
+
+			.audio-container audio::-webkit-media-controls-panel {
+				background-color: #667eea;
+			}
+
+			.audio-info {
+				text-align: center;
+				color: rgba(255, 255, 255, 0.95);
+				font-size: 1.05em;
+				font-weight: 500;
+				margin-top: 15px;
+			}
+
+			/* Podcast Description */
+			.podcast-description {
+				background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+				padding: 35px;
+				border-radius: 12px;
+				border-left: 6px solid #ff6b6b;
+				margin: 35px 0;
+			}
+
+			.podcast-description h4 {
+				font-size: 1.3em;
+				color: #1a1a1a;
+				margin: 20px 0 15px 0;
+				font-weight: 700;
+			}
+
+			.podcast-description h4:first-child {
+				margin-top: 0;
+			}
+
+			.podcast-description p {
+				font-size: 1.05em;
+				line-height: 1.7;
+				color: #555;
+			}
+
+			.podcast-description ul {
+				margin: 15px 0;
+				padding-left: 30px;
+			}
+
+			.podcast-description ul li {
+				font-size: 1.05em;
+				color: #555;
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.audio-section {
+					padding: 25px;
+				}
+
+				.audio-container {
+					padding: 15px;
+				}
+
+				.podcast-description {
+					padding: 20px;
+				}
+
+				.podcast-description h4 {
+					font-size: 1.15em;
+				}
+
+				.podcast-description ul {
+					padding-left: 20px;
+				}
+			}
+		</style>
 
 	</body>
 </html>
